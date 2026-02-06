@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Martin-Smith - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2c5282;
+            --accent-color: #3182ce;
+            --text-dark: #1a202c;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 40px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .header h1 {
+            font-size: 42px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .contact-info .item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info i {
+            color: var(--accent-color);
+            font-size: 16px;
+        }
+
+        /* Section Titles */
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title i {
+            color: var(--accent-color);
+            font-size: 22px;
+        }
+
+        /* Profile Section */
+        .profile-text {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .skill-category p {
+            color: var(--text-light);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Competencies */
+        .competencies-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .competency {
+            background: white;
+            padding: 15px;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .competency h4 {
+            color: var(--primary-color);
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .competency p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Work Experience */
+        .job {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .job-period {
+            color: var(--accent-color);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .job-role {
+            color: var(--secondary-color);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .job-description {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .achievements {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .achievements li {
+            color: var(--text-light);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .achievements li:before {
+            content: "▸";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 8px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .job {
+                page-break-inside: avoid;
+            }
+
+            .header {
+                margin-bottom: 25px;
+                padding-bottom: 20px;
+            }
+
+            .section-title {
+                margin-bottom: 15px;
+            }
+
+            .skills-grid,
+            .competencies-grid {
+                gap: 12px;
+            }
+        }
+
+        @page {
+            margin: 1cm;
+            size: A4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Jason Martin-Smith</h1>
+            <div style="color: var(--text-light); margin: 8px 0;">
+                13 Hardy Road, West Moors, BH220EX, United Kingdom
+            </div>
+            <div class="contact-info">
+                <div class="item">
+                    <i class="fas fa-envelope"></i>
+                    <span>jmartinsmith@gmail.com</span>
+                </div>
+                <div class="item">
+                    <i class="fas fa-phone"></i>
+                    <span>07873183382</span>
+                </div>
+                <div class="item">
+                    <i class="fab fa-github"></i>
+                    <span>github/dwengo</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-user"></i>
+                Profile
+            </h2>
+            <p class="profile-text">
+                Senior technology leader with Software Engineering degree from Bournemouth University and proven track record delivering complex DeFi, blockchain, and fintech solutions. Specialized in Layer 2 scaling solutions, cross-chain interoperability, and smart contract security. Expert in leading high-impact initiatives across Web3, institutional trading platforms, and enterprise environments. Adept at bridging technical execution with commercial outcomes in fast-moving blockchain ecosystems.
+            </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-code"></i>
+                Technical Skills
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages & Frameworks</h4>
+                    <p>TypeScript, Solidity, Rust, Python, React, Node.js</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Development Tools & Frameworks</h4>
+                    <p>Hardhat, Foundry, Prisma, OpenZeppelin, GraphQL, Typechain</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Blockchain Platforms & Layer 2</h4>
+                    <p>Ethereum, Arbitrum, Autonity, Polygon, zkSync, Layer 2 scaling solutions</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Infrastructure & DevOps</h4>
+                    <p>GitHub Actions, Railway, Cloudflare (Pages, R2), AWS (S3, CloudFront, EC2), GCP, PostgreSQL, TimescaleDB, Snowflake</p>
+                </div>
+                <div class="skill-category">
+                    <h4>DeFi & Web3 Technologies</h4>
+                    <p>Viem, Wagmi, Web3.js, Ethers.js, Smart contract development, Cross-chain interoperability, DeFi protocols</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Security & Auditing</h4>
+                    <p>Smart contract security, Vulnerability assessment, Gas optimization, Formal verification</p>
+                </div>
+            </div>
+        </div>
+        <!-- Work History -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-briefcase"></i>
+                Work History
+            </h2>
+
+            <!-- Clearmatics -->
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Clearmatics</div>
+                    <div class="job-period">2023 - Current</div>
+                </div>
+                <div class="job-role">Head of Frontend Engineering</div>
+                <p class="job-description">
+                    Lead frontend architecture across 7 production DeFi applications and spearheaded development of institutional high-frequency trading platform. Define technical direction and infrastructure strategy for hybrid Web3/CEX trading ecosystem.
+                </p>
+            </div>
+
+            <!-- Phuture Finance -->
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Phuture Finance</div>
+                    <div class="job-period">2021 - 2023</div>
+                </div>
+                <div class="job-role">Senior Engineer & Technical Strategist</div>
+                <p class="job-description">
+                    Led architecture and strategic evolution of Phuture DeFi platform, delivering 5+ innovative Web3 products including DeFi index platforms and smart contract betting protocols.
+                </p>
+                <ul class="achievements">
+                    <li><strong>Trading Platform Architecture:</strong> Built full-stack institutional trading solution integrating blockchain RPC events and CEX socket APIs for real-time data processing and hybrid trading functionality</li>
+                    <li><strong>Performance-Critical Backend:</strong> Developed custom high-throughput backend capable of streaming and managing institutional-grade financial data with microsecond latency requirements</li>
+                    <li><strong>Advanced Charting Infrastructure:</strong> Delivered reusable charting suite using Plotly with live SMA overlays and Bollinger Bands, providing traders with real-time technical analysis capabilities</li>
+                    <li><strong>Order Book System (CLOB):</strong> Architected strategic Central Limit Order Book supporting live and simulation trading with configurable stop-loss, bid/ask controls, and dynamic token pair switching</li>
+                    <li><strong>Multi-Cloud Infrastructure:</strong> Orchestrated production deployments across AWS (S3, CloudFront), Cloudflare (Pages, R2), and Railway with 99.9% uptime and global edge performance</li>
+                    <li><strong>Data Architecture:</strong> Integrated PostgreSQL, TimescaleDB, Prisma, and Snowflake for real-time analytics and performance optimization at institutional scale</li>
+                    <li><strong>Full-Stack DeFi Development:</strong> Delivered end-to-end components from Solidity smart contracts to React UI architecture, ensuring product cohesion and cross-chain reliability</li>
+                    <li><strong>Rust Migration Leadership:</strong> Drove transition from Solidity to Rust (Foundry) for OmniChain index support, modernizing contract architecture and improving cross-chain maintainability</li>
+                    <li><strong>Real-Time Trading Widget:</strong> Built Crypto Index Widget enabling real-time minting/burning of index tokens with live price quotes, slippage analysis, and multi-asset withdrawal functionality</li>
+                    <li><strong>Developer SDK Creation:</strong> Architected and maintained Phuture TypeScript SDK, now adopted by external development teams for smart contract interactions and protocol integration</li>
+                    <li><strong>Wallet Infrastructure Expansion:</strong> Redesigned wallet architecture from 3 to 8 provider support using pluggable architecture, significantly improving user access and ecosystem compatibility</li>
+                    <li><strong>DevOps Standardization:</strong> Implemented CI/CD pipelines using GitHub Actions with AWS deployment automation, reducing deployment time by 70% and eliminating manual errors</li>
+                </ul>
+            </div>
+
+            <!-- J.P. Morgan -->
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">J.P. Morgan</div>
+                    <div class="job-period">2019 - 2021</div>
+                </div>
+                <div class="job-role">Senior Engineer</div>
+                <p class="job-description">
+                    Led strategic frontend initiatives and architectural transformations within J.P. Morgan's investment technology division, delivering enterprise-scale fintech solutions and establishing UI standards across internal teams.
+                </p>
+            </div>
+
+            <!-- Hitachi -->
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Hitachi</div>
+                    <div class="job-period">2014 - 2019</div>
+                </div>
+                <div class="job-role">Senior Software Engineer</div>
+                <p class="job-description">
+                    Led enterprise digital transformation initiative modernizing Hitachi's software infrastructure through API-first architecture, Agile methodologies, and modern development practices.
+                </p>
+                <ul class="achievements">
+                    <li><strong>Microservices Architecture:</strong> Decomposed monolithic liquidity platform into language-agnostic micro frontends powered by RESTful microservices, improving system maintainability and development velocity by 60%</li>
+                    <li><strong>Treasury Control System:</strong> Designed and delivered greenfield funding control tool for internal treasury operations with PWA capabilities and custom WebSocket framework—adopted by 5+ teams bank-wide</li>
+                    <li><strong>Technology Migration Leadership:</strong> Co-founded UX forum driving organization-wide migration from AngularJS to React with TypeScript, establishing engineering standards for linting, component reuse, and development workflows</li>
+                    <li><strong>Knowledge Transfer & Training:</strong> Delivered technical presentations on component-driven development, UI architecture, and testing frameworks including Styleguidist and Cypress to 100+ engineers</li>
+                    <li><strong>API Modernization:</strong> Architected RESTful interface replacing legacy SOAP systems, enabling modular architecture and improved scalability across enterprise storage product lines</li>
+                    <li><strong>Development Acceleration:</strong> Built internal API Manager (pre-Swagger era) accelerating parallel UI/backend development and reducing product time-to-market by 40%</li>
+                    <li><strong>Testing Framework Innovation:</strong> Created comprehensive Python-based testing framework using API Manager JSON outputs, streamlining full-stack validation and improving deployment confidence</li>
+                    <li><strong>User Experience Transformation:</strong> Developed modern React and BackboneJS web interfaces for enterprise backup and recovery tools, significantly enhancing system transparency and user adoption</li>
+                    <li><strong>Agile Culture Implementation:</strong> Championed organization-wide Agile adoption, embedding iterative workflows and customer feedback loops that improved feature delivery alignment and team efficiency</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
