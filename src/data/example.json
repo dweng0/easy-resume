@@ -1,0 +1,52 @@
+{
+  "name": "Your Full Name",
+  "contact": {
+    "email": "your.email@example.com",
+    "phone": "01onal234567890",
+    "github": "github/yourusername",
+    "linkedin": "/your-linkedin-profile",
+    "address": "123 Your Street, City, Postcode, Country"
+  },
+  "profile": "A brief professional summary describing your experience, expertise, and career focus. This should be 2-3 sentences highlighting your key strengths and what you bring to potential employers.",
+  "skills": [
+    {
+      "title": "Skill Category 1",
+      "skills": "Description of skills in this category. Include specific technologies, methodologies, or competencies."
+    },
+    {
+      "title": "Skill Category 2",
+      "skills": "Description of skills in this category. Include specific technologies, methodologies, or competencies."
+    },
+    {
+      "title": "Skill Category 3",
+      "skills": "Description of skills in this category. Include specific technologies, methodologies, or competencies."
+    },
+    {
+      "title": "Skill Category 4",
+      "skills": "Description of skills in this category. Include specific technologies, methodologies, or competencies."
+    }
+  ],
+  "workHistory": [
+    {
+      "company": "Company Name",
+      "period": "2022 - Current",
+      "role": "Your Job Title",
+      "description": "Brief description of your role and responsibilities at this company.",
+      "achievements": [
+        "Achievement 1: Description of what you accomplished and the impact it had",
+        "Achievement 2: Description of what you accomplished and the impact it had",
+        "Achievement 3: Description of what you accomplished and the impact it had"
+      ]
+    },
+    {
+      "company": "Previous Company",
+      "period": "2019 - 2022",
+      "role": "Previous Job Title",
+      "description": "Brief description of your role and responsibilities at this company.",
+      "achievements": [
+        "Achievement 1: Description of what you accomplished and the impact it had",
+        "Achievement 2: Description of what you accomplished and the impact it had"
+      ]
+    }
+  ]
+}

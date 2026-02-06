@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply font-sans leading-relaxed text-slate-800 bg-white;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: white;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .section,
+  .job {
+    page-break-inside: avoid;
+  }
+}
+
+@page {
+  margin: 1cm;
+  size: A4;
+}
